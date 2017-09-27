@@ -17,9 +17,20 @@
 //     }
 //   }
 // }
-
+/*
 function func1() {
   var sel = document.getElementById('mySelect').selectedIndex;
   var options = document.getElementById('MySelect').options;
   alert("Init option " +options[sel].text);
 }
+*/
+
+
+
+var john = {
+    name: 'John',
+    lastname: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false
+};
