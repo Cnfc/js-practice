@@ -58,3 +58,57 @@
 //   return result
 // }
 
+
+//
+// function fun1() {
+//   var chbox;
+//   chbox = document.getElementById('one');
+//
+//   if(chbox.checked) {
+//     alert("EXIST");
+//   } else {
+//     alert("NOT EXIST");
+//   }
+// }
+
+// function fun1() {
+//   var radi=document.getElementsByName('r1');
+//   for (var i = 0; i<radi.length; i++) {
+//     if(radi[i].checked) {
+//       alert("check " + i + ' element');
+//     }
+//   }
+// }
+//
+//
+//
+//
+// function func1() {
+//   var sel = document.getElementById('mySelect').selectedIndex;
+//   var options = document.getElementById('mySelect').options;
+//   alert('Your choose ' + options[sel].text);
+// }
+
+
+function func() {
+  var rng=document.getElementById('r1');
+  var div=document.getElementById('test');
+  div.style.width=rng.value+'px';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
