@@ -1,16 +1,18 @@
-var todos = ["Buy New Turtle"];
-
-var input = prompt("what would you like to do?");
-
-if (input === 'list') {
-    console.log(todos);
-
-} else if (input === 'new') {
-    var newTodo = prompt("Enter new todo");
-    todos.push(newTodo);
+function Dog(name, breed, weight) {
+  this.name = name;
+  this.breed = breed;
+  this.weight = weight;
 }
+var fido = new Dog("Fido", "Mixed", 38);
+var fluffy = new Dog("fluffy", "Mixed", 41);
+var spot = new Dog("spot", "Mixed", 23);
+var dogs = new Dog("dogs", "Mixed", 12);
 
-while (input !== "quit") {
+for (var i = 0; i<dogs.length; i++) {
+  var size = 'small';
+   if(dogs[i].weight > 10) {
+     size="large";
 
+   }
+   console.log("Dog" + dogs[i].name + " is a " + size + " " + dogs[i].breed);
 }
-console.log("Ok, you quit the app")
