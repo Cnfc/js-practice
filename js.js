@@ -37,7 +37,7 @@
 //   width: 200,
 //   height: 300,
 //   title: "My menu"
-// };
+//  };
 //
 // function isNumeric(n) {
 //   return !isNaN(parseFloat(n)) && isFinite(n)
@@ -56,10 +56,21 @@
 
 
 
-
-
-
-
+// SCOPE
+// function foo(a) {
+//   console.log(a + b);
+//  }
+// var b =2;
+// foo(2);
+//
+// function foo(a) {
+//   let b = 2 * a;
+//   function bar(c){
+//     console.log(a,b,c);
+//   }
+//   bar(b* 3);
+//  }
+//  foo(2);
 
 
 
