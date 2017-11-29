@@ -158,22 +158,57 @@
 // let value2 = 26;
 // console.log(Math.max(value1, value2));
 
-var values = [25, 50, 75, 100, 38];
+// var values = [25, 50, 75, 100, 38];
+// console.log(Math.max(...values, 0));
 // console.log(Math.max.apply(Math, values));
-console.log(Math.max(...values, 0));
 
+//
+// var doSomething = function doSomethingElse() {
+//   //
+// };
+// var person = {
+//   get firstName() {
+//     return "Nicholas"
+//   },
+//   sayName: function() {
+//     console.log(this.name);
+//   }
+// }
+// console.log(doSomething.name);
+//
+//
 
+// function Person(name) {
+//   this.name = name;
+//
+// }
+// var person = new Person("Nicholas");
+// var notAPerson = Person("Nicolas");
+// console.log(person);
+// console.log(notAPerson);
+//
 
-
-
-
-
-
-
-
-
-
-
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "my menu"
+// };
+//
+// function isNumeric(n) {
+//   return (parseFloat(n)) && isFinite(n)
+// }
+//
+//
+// function multiplyNumeric(obj) {
+//   for(let i in obj) {
+//     if (isNumeric(obj[i])){
+//       obj[i] *=2
+//     }
+//
+//   }
+// }
+// multiplyNumeric(menu);
+// console.log( "menu wigth: " + menu.width);
 
 
 
