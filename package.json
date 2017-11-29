@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "version": "",
+  "description": "ECMASCRIPT 6 Developer guide",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "underscore": "^1.8.3"
+  }
+}

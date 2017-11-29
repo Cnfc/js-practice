@@ -10,6 +10,7 @@
 *.swo
 *.swp
 *.vi
+*.tmp
 *~
 
 # OS or Editor folders
