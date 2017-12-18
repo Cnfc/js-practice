@@ -14,13 +14,136 @@
 //
 // console.log(john);
 
+//
+// var personProto = {
+//   calculateAge: function() {
+//     console.log(2016-this.yearOfBirth);
+//   }
+// };
+//
+// var john = Object.create(personProto);
+//
+// console.log(john);
+// john.name = "john";
 
-var personProto = {
-  calculateAge: function() {
-    console.log(2016-this.yearOfBirth);
+let years = [1990, 1965, 1937, 2005, 1998];
+
+function arrayCalc(arr, fn) {
+  let arrRes = [];
+  for(let i=0; i<arr.length; i++) {
+    arrRes.push(fn(arr[i]));
   }
-};
+  return arrRes;
+}
 
-var john = Object.create(personProto);
+function calculateAge(el) {
+  return 2017 - el;
+}
 
-console.log(john);
+function isFullAge(el) {
+  return el >= 18;
+}
+
+let ages = arrayCalc(years, calculateAge);
+
+let fullAges = arrayCalc(ages, isFullAge);
+
+console.log(ages);
+console.log(fullAges);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
