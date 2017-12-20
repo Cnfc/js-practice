@@ -24,3 +24,109 @@
 //   }
 //
 // }
+
+// 
+//
+// function sayHello (who) {
+//   console.log("hello, " + who.name + "! My name is " + this.name);
+//
+// }
+//
+// let user = {
+//   name: "Marina"
+// };
+//
+// let admin = {
+//   name: "Tim"
+// };
+//
+// sayHello.call(user, admin);
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
