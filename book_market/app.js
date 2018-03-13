@@ -7,9 +7,9 @@ function Book(title, author, isbn) {
 }
 
 // UI constructor
-function UI(){}
+function UI() {}
 
-UI.prototype.addBookToList = function(book){
+UI.prototype.addBookToList = function(book) {
   const list = document.getElementById('book-list');
 
   const row = document.createElement('tr');
@@ -24,33 +24,33 @@ UI.prototype.addBookToList = function(book){
 };
 
 // SHOW ALLERTS
-UI.prototype.showAllert = function(message, className){
+UI.prototype.showAllert = function(message, className) {
   const div = document.createElement('div');
   div.className = `alert ${className}`;
   div.appendChild(document.createTextNode(message));
   const container = document.querySelector('.container');
   const form = document.querySelector('#book-form');
   container.insertBefore(div, form);
-  setTimeout(function(){
+  setTimeout(function() {
     document.querySelector('.alert').remove();
   }, 3000);
 };
 
 // Delete Book
 UI.prototype.deleteBook = function(target) {
-  if(target.className === 'delete') {
+  if (target.className === 'delete') {
     target.parentElement.parentElement.remove();
   }
 };
 
-UI.prototype.clearFields = function(){
+UI.prototype.clearFields = function() {
   document.getElementById('title').value = '';
   document.getElementById('author').value = '';
   document.getElementById('isbn').value = '';
 };
 
 // Event  Listentrs
-document.getElementById('book-form').addEventListener('submit', function(e){
+document.getElementById('book-form').addEventListener('submit', function(e) {
   // GEt form values
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
@@ -61,7 +61,7 @@ document.getElementById('book-form').addEventListener('submit', function(e){
   const ui = new UI();
 
   // VALIDATE
-  if(title === '' || author === '' || isbn === ''){
+  if (title === '' || author === '' || isbn === '') {
     ui.showAllert('Please fill in all fields', 'error');
   } else {
     // Add book to list;
@@ -73,7 +73,7 @@ document.getElementById('book-form').addEventListener('submit', function(e){
   e.preventDefault();
 });
 // Event listenter for delete
-document.getElementById('book-list').addEventListener('click', function(e){
+document.getElementById('book-list').addEventListener('click', function(e) {
   const ui = new UI();
   ui.deleteBook(e.target);
   ui.showAllert('Book Removed', 'success');
