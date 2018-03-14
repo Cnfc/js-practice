@@ -66,7 +66,11 @@ class Store {
     return books;
   }
   static displayBooks() {
-
+    const books = Store.getBooks();
+    books.forEach(function(book){
+      const ui = new UI;
+      ui.addBookToList(book);
+    })
   }
 
   static addBook(book){
