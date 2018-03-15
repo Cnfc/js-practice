@@ -124,18 +124,18 @@ document.getElementById('book-form').addEventListener('submit', function(e) {
 
   e.preventDefault();
 });
-
-// Event listener for delete
-document.getElementById('book-list').addEventListener('click', function(e) {
-  // Instantiate UI
-  const ui = new UI();
-
-  // Delete book
-  ui.deleteBook(e.target);
-  // remove from LS
-  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
-  // Show message
-  ui.showAlert('Book removed', 'success');
-
-  e.preventDefault();
-});
+//
+// // Event listener for delete
+// document.getElementById('book-list').addEventListener('click', function(e) {
+//   // Instantiate UI
+//   const ui = new UI();
+//
+//   // Delete book
+//   ui.deleteBook(e.target);
+//   // remove from LS
+//   Store.removeBook(e.target.parentElement.previousElemen tSibling.textContent);
+//   // Show message
+//   ui.showAlert('Book removed', 'success');
+//
+//   e.preventDefault();
+// });
