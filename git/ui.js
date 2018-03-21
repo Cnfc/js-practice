@@ -34,20 +34,6 @@ class UI {
     `;
   }
 
-  showAlert(message, className) {
-    this.clearAlert();
-    const div = document.createElement('div'); // Create div
-    div.className = className;//add classes
-    div.appendChild(document.createTextNode(message));//add text
-    const container = document.querySelector('.searchContainer');//get parent
-    const search = document.querySelector('.search'); //get search box
-    container.insertBefore(div, search);  //Insert Before
-
-    setTimeout(() => {
-      this.clearAlert();
-    }, 3000);
-  }
-
   // Show user repos
   showRepos(repos){
     let output = '';
@@ -72,6 +58,20 @@ class UI {
     document.getElementById('repos').innerHTML = output;
   }
 
+
+  showAlert(message, className) {
+    this.clearAlert();
+    const div = document.createElement('div'); // Create div
+    div.className = className;//add classes
+    div.appendChild(document.createTextNode(message));//add text
+    const container = document.querySelector('.searchContainer');//get parent
+    const search = document.querySelector('.search'); //get search box
+    container.insertBefore(div, search);  //Insert Before
+
+    setTimeout(() => {
+      this.clearAlert();
+    }, 3000);
+  }
   // clear Alert Message
   clearAlert(){
     const currentAlert = document.querySelector('.alert');
