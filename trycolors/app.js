@@ -1,77 +1,48 @@
-//
-//
-// // Basic structure
-//
-// (function(){
-//   // declare private vars and function
-//
-//   return {
-//     // declare public var and function
-//
-//   }
-// })();
+function MemberFactory() {
+  this.createMember = function(name, type){
+    let member;
 
-// // Standart MODULE PATTERN
-// const UICtrl = (function() {
-//   let text = 'Hello world!';
-//
-//   const changeText = function() {
-//     const element = document.querySelector('h1');
-//     element.textContent = text;
-//   }
-//
-//   return {
-//     callChangeText: function() {
-//       changeText();
-//       console.log(text);
-//     }
-//   }
-// })();
-//
-// UICtrl.callChangeText();
+    if(type === 'simple'){
+      member = new SimpleMembership(name);
+    } else if(type === 'standart') {
+      member = new StandartMembership(name);
+    } else if(type === 'super') {
+      member = new SuperMembership(name);
+    }
 
-
-
-//revealing module pattern
-const ItemCtrl = (function() {
-  let  data = [];
-
-  function add(item) {
-    data.push(item);
-    console.log('item added');
+    member.type = type;
+    member.define = function() {
+      console.log(`${this.name} (${this.type}): ${this.cost}`);
+    }
+    return member;
   }
+}
 
-  function get(id){
-    return data.find(item => {
-      return item.id === id;
-    });
-  }
+const SimpleMembership = function(name) {
+  this.name = name;
+  this.cost = '$5';
+}
+const StandartMembership = function(name) {
+  this.name = name;
+  this.cost = '$15';
+}
+const SuperMembership = function(name) {
+  this.name = name;
+  this.cost = '$35';
+}
 
-  return {
-    add: add,
-    get: get
-  }
-})();
+const members = [];
+const factory = new MemberFactory();
 
+members.push(factory.createMember('John Doe', 'simple'));
+members.push(factory.createMember('Chris Jackson', 'super'));
+members.push(factory.createMember('Tom Smith', 'standart'));
 
-ItemCtrl.add({id: 1, name: 'John'});
-console.log(ItemCtrl.get(1));
+console.log(members);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+members.forEach(function(member) {
+  member.define();
+});
 
 
 
