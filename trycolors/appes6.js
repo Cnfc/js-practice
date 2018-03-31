@@ -1,23 +1,23 @@
 
-function EventObservers(){
-  this.observers = [];
+class EventObservers{
+  constractor(){
+    this.observers = [];
+  }
 
-}
-
-EventObservers.prototype = {
-  subscribe: function(fn) {
+  subscribe(fn) {
     this.observers.push(fn);
     console.log(`You are now subscribed to ${fn.name}`);
-  },
-  unsubscribe: function(fn) {
+  }
+  unsubscribe(fn) {
     this.observers = this.observers.filter(function(item){
       if(item !== fn){
         return item;
       }
     });
     console.log(`You are now unsubscribed from ${name}`);
-  },
-  fire: function() {
+  }
+
+  fire() {
     this.observers.forEach(function(item) {
       item.call();
     });
