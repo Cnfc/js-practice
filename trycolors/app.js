@@ -1,30 +1,106 @@
+//
+//
+// // Basic structure
+//
+// (function(){
+//   // declare private vars and function
+//
+//   return {
+//     // declare public var and function
+//
+//   }
+// })();
 
-const map1 = new Map();
+// // Standart MODULE PATTERN
+// const UICtrl = (function() {
+//   let text = 'Hello world!';
+//
+//   const changeText = function() {
+//     const element = document.querySelector('h1');
+//     element.textContent = text;
+//   }
+//
+//   return {
+//     callChangeText: function() {
+//       changeText();
+//       console.log(text);
+//     }
+//   }
+// })();
+//
+// UICtrl.callChangeText();
 
-const key1 = 'some string',
-      key2 = {},
-      key3 = function(){};
 
-map1.set(key1, 'value of key1');
-map1.set(key2, 'value of key2');
-map1.set(key3, 'value of key3');
 
-// console.log(map1.get(key1), map1.get(key2), map1.get(key3));
+//revealing module pattern
+const ItemCtrl = (function() {
+  let  data = [];
 
-// console.log(map1.size);
+  function add(item) {
+    data.push(item);
+    console.log('item added');
+  }
 
-for(let [key, value] of map1) {
-  // console.log(`${key} = ${value}`);
-}
+  function get(id){
+    return data.find(item => {
+      return item.id === id;
+    });
+  }
 
-    // ES6
+  return {
+    add: add,
+    get: get
+  }
+})();
 
-const set1 = new Set();
 
-set1.add(100);
-set1.add('Add string');
-set1.add({name: 'John'});
-set1.add(true);
-set1.add(100);
+ItemCtrl.add({id: 1, name: 'John'});
+console.log(ItemCtrl.get(1));
 
-console.log(set1.size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
